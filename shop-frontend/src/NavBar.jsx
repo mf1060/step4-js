@@ -27,7 +27,9 @@ function NavBar(props){
             {/*Adding links to the home, search, and cart pages */}
             <a class="nav-item nav-link active" href="/">Home</a>
             <a class="nav-item nav-link" href="/Search">Search</a>
-            <a class="nav-item nav-link" href="/Cart">Cart
+            <a class="nav-item nav-link" href="/Cart">
+            {/*Using the basket bootstrap icon: https://icons.getbootstrap.com/icons/basket/ */}
+            <i class="bi bi-basket"></i>
             {/* The following code uses a Bootstrap badge component to display the 
                 number of items in the shopping cart.
               Reference: https://getbootstrap.com/docs/4.0/components/badge/ */}
