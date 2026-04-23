@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "Pen",
+      "description": "A reliable and durable pen for all your writing needs.",
+      "inCart": false,
+      "img": "/pen.jpeg",
+      "altImg": "Pen",
+      "price": 0.75,
+      "quantity": 0
+    },
+    {
+      "id": "2",
+      "title": "Hand Sanitizer",
+      "description": "A small hand sanitizer for travel",
+      "inCart": false,
+      "img": "/hand_sanitizer.jpeg",
+      "altImg": "Hand Sanitizer",
+      "price": 2.15,
+      "quantity": 0
+    },
+    {
+      "id": "3",
+      "title": "Flowers",
+      "description": "Small set of wood flowers for a table setting.",
+      "inCart": false,
+      "img": "/flowers.jpeg",
+      "altImg": "Flowers",
+      "price": 4.95,
+      "quantity": 0
+    },
+    {
+      "id": "4",
+      "title": "GRE Flashcards",
+      "description": "Study for your next GRE exam with these lightly-used flashcards.",
+      "inCart": false,
+      "img": "/gre_flashcards.jpeg",
+      "altImg": "GRE Flashcards",
+      "price": 6.99,
+      "quantity": 0
+    },
+    {
+      "id": "5",
+      "title": "Listerine",
+      "description": "A small bottle of mouthwash for travel purposes.",
+      "inCart": false,
+      "img": "/listerine.jpeg",
+      "altImg": "Listerine",
+      "price": 5.23,
+      "quantity": 0
+    },
+    {
+      "id": "6",
+      "title": "Mini Shampoo",
+      "description": "A small bottle of travel shampoo.",
+      "inCart": false,
+      "img": "/mini_shampoo.jpeg",
+      "altImg": "Mini Shampoo",
+      "price": 1.99,
+      "quantity": 0
+    },
+    {
+      "id": "7",
+      "title": "Mini Shaving Cream",
+      "description": "A small container of shaving cream for travel purposes",
+      "inCart": false,
+      "img": "/mini_shaving_cream.jpeg",
+      "altImg": "Mini Shaving Cream",
+      "price": 1.75,
+      "quantity": 0
+    },
+    {
+      "id": "8",
+      "title": "Mini Toothpaste",
+      "description": "This is a small toothpaste for travel.",
+      "inCart": false,
+      "img": "/mini_toothpaste.jpeg",
+      "altImg": "Mini Toothpaste",
+      "price": 2.15,
+      "quantity": 0
+    },
+    {
+      "id": "9",
+      "title": "Stapler",
+      "description": "A reliable stapler",
+      "inCart": false,
+      "img": "/stapler.jpeg",
+      "altImg": "Stapler",
+      "price": 7.75,
+      "quantity": 0
+    },
+    {
+      "id": "10",
+      "title": "Tums",
+      "description": "A travel-sized tums for indigestion.",
+      "inCart": false,
+      "img": "/tums.jpeg",
+      "altImg": "Tums",
+      "price": 3.1,
+      "quantity": 0
+    },
+    {
+      "id": "11",
+      "title": "Lego Robot",
+      "description": "A neat lego robot for your table setting!",
+      "inCart": false,
+      "img": "/lego_robot.jpeg",
+      "altImg": "Lego Robot",
+      "price": 12.99,
+      "quantity": 0
+    },
+    {
+      "id": "12",
+      "title": "Phone Charger",
+      "description": "A USB-C to lightning phone charger",
+      "inCart": false,
+      "img": "/phone_charger.jpeg",
+      "altImg": "Phone Charger",
+      "price": 15.99,
+      "quantity": 0
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
