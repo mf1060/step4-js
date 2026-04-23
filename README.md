@@ -21,6 +21,7 @@ The current implemented features are:
 - An "add to cart" button that uses "+" and "-"/garbage can icons to add or remove items to the cart.
 - Individual product pages linked to each item in the home, search, and cart pages.
 - The ability to add items to the cart from the home, search, individual product pages, and the cart page.
+- Uses a [Bootstrap offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/) to show the contents of the cart whenever a new item is added to the cart.
 
 
 
