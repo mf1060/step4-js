@@ -1,0 +1,31 @@
+#search{
+    width: 500px;
+}
+
+.nav-brand{
+    background-color: darkblue;
+    color:white;
+}
+
+#search-icon{
+    background-color: orange;
+}
+
+#nav_bar_1 {
+    background-color: rgb(27, 27, 66);
+    color: white;
+}
+
+#nav_bar_2 {
+    background-color: rgb(58, 58, 109);
+    color: white;
+}
+
+.navbar-nav {
+    color:white;
+    background-color: (27, 27, 66);
+}
+
+a:hover {
+    border: 2px white solid;
+}

@@ -27,7 +27,7 @@ return(
     {//Creating a carousel item for each product.
       props.allItems.map((item) => {
         return(
-          <div class="carousel-item">
+          <div key={item.title} class="carousel-item">
             <Card item={item} class="d-block w-100"/>
           </div>
         )

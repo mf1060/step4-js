@@ -4,17 +4,30 @@
 //The following is a link to small button at the top
 //https://getbootstrap.com/docs/5.0/utilities/position/
 
+import SearchResults from './SearchResults';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 function NavBar(props){
 
-    //Getting the number of items in the cart.
-    let numItems = 0
-     props.cartItems.map((t) => {
-      numItems = numItems + t.quantity
-    })
+//Getting the number of items in the cart.
+let numItems = 0
+  props.cartItems.map((t) => {
+  numItems = numItems + t.quantity
+})
+
+  //This is similar to the search function we developed in class. 
+  const handleSearch = () => {
+    //Gets the search term from the user's input in the search bar.
+    const inputText = document.getElementById('search').value;
+    //On change, the function would display any item that matches language in the search term.
+    //Stores all items that match the search term to the items variable.
+    props.setSearchTerm(inputText)
+    props.setResults(props.allItems.filter(items => items.title.toLowerCase().includes(inputText)));
+  }
 
     return(
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <>
+      <nav id="nav_bar_1" class="navbar navbar-expand-lg navbar-dark">
         {/*Adds a logo with the link to the home page */}
         <a class="navbar-brand" href="/">Michael's Shop</a>
         {/*Adds a hamburger button 
@@ -26,7 +39,10 @@ function NavBar(props){
           <div class="navbar-nav">
             {/*Adding links to the home, search, and cart pages */}
             <a class="nav-item nav-link active" href="/">Home</a>
-            <a class="nav-item nav-link" href="/Search">Search</a>
+          </div>
+          <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            {/*Using a magnifying glass icon: https://icons.getbootstrap.com/icons/search/ */}
+            <button id="search-icon" href={`search/?${props.searchTerm}`} onChange={handleSearch}><i class="bi bi-search"></i></button>
             <a class="nav-item nav-link" href="/Cart">
             {/*Using the basket bootstrap icon: https://icons.getbootstrap.com/icons/basket/ */}
             <i class="bi bi-basket"></i>
@@ -35,9 +51,30 @@ function NavBar(props){
               Reference: https://getbootstrap.com/docs/4.0/components/badge/ */}
             {<span class="badge badge-info text-warning">{numItems}</span>}
             </a>
-          </div>
         </div>
       </nav>
+
+      <div id="nav_bar_2">
+        <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link">All</a>
+            <a class="nav-item nav-link">Amazon Haul</a>
+            <a class="nav-item nav-link">Medical Care</a>
+            <a class="nav-item nav-link">Amazon Basics</a>
+            <a class="nav-item nav-link">Best Sellers</a>
+            <a class="nav-item nav-link">Books</a>
+            <a class="nav-item nav-link">Prime</a>
+            <a class="nav-item nav-link">Today's Deals</a>
+            <a class="nav-item nav-link">Gift Cards</a>
+            <a class="nav-item nav-link">Sell</a>
+            <a class="nav-item nav-link">Groceries</a>
+            <a class="nav-item nav-link">New Releases</a>
+            <a class="nav-item nav-link">Registry</a>
+            <a class="nav-item nav-link">Smart Home</a>
+        </div>
+        </nav>
+      </div>
+      </>
 
     )
 

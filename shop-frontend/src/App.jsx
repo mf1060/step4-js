@@ -6,12 +6,16 @@ import Search from './SearchBar';
 import Home from './Home';
 import NavBar from './NavBar';
 import ItemPage from './ItemPage';
+import SearchResults from './SearchResults';
+import Cart from './ShoppingCart';
 
 function App() {
 
   const API_URL = 'http://localhost:5000/items';
   const [allItems, setAllItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [results, setResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     //Fetches data from the server and 
@@ -31,11 +35,12 @@ function App() {
       .then(items => setCartItems(items))
   })
 
-
   return (
     <>
     <BrowserRouter>
-        <NavBar cartItems={cartItems}/>
+        <NavBar allItems={allItems} cartItems={cartItems} 
+        setResults={setResults} setSearchTerm={setSearchTerm} 
+        searchTerm={searchTerm} results={results}/>
 
       <Routes>
         {/*Creating a route for the home page */}
@@ -52,9 +57,20 @@ function App() {
             <Route path={`/${t.id}`} element={<ItemPage item={t} />} />  
         ))}
 
+        <Route path={`search/?${searchTerm}`} element={<SearchResults results={results} />} />
+
       </Routes>
 
     </BrowserRouter>
+
+    {/*Using off canvas from Bootstrap:
+    https://getbootstrap.com/docs/5.3/components/offcanvas/ */}
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <button type="button" class="btn-close" data-bs-dismiss="#my-offcanvas" aria-label="Close"></button>
+        <ShoppingCart cartItems={cartItems} />
+        
+    </div>
       
     </>
   )

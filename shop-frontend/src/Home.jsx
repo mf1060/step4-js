@@ -1,4 +1,5 @@
 import Carousel from "./Carousel";
+import Card from './Card';
 
 function Home(props){
 
@@ -13,6 +14,18 @@ function Home(props){
             </p>
             {/* Adds the Carousel Component */}
             <Carousel allItems = {props.allItems}/>
+            <div class="row">
+
+        <h1>Featured Items</h1>
+        
+      {props.allItems.map((t) => {
+          return (
+          //Arranges cards so that there are four cards in each row in the search results.
+          <div key={t.id} class="col-sm-3">
+          <Card item={t} />
+          </div>
+        )})}
+        </div>
         </>
     )
 

@@ -4,11 +4,11 @@
       "id": "1",
       "title": "Pen",
       "description": "A reliable and durable pen for all your writing needs.",
-      "inCart": false,
+      "inCart": true,
       "img": "/pen.jpeg",
       "altImg": "Pen",
       "price": 0.75,
-      "quantity": 0
+      "quantity": 2
     },
     {
       "id": "2",
@@ -104,21 +104,21 @@
       "id": "11",
       "title": "Lego Robot",
       "description": "A neat lego robot for your table setting!",
-      "inCart": false,
+      "inCart": true,
       "img": "/lego_robot.jpeg",
       "altImg": "Lego Robot",
       "price": 12.99,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "12",
       "title": "Phone Charger",
       "description": "A USB-C to lightning phone charger",
-      "inCart": false,
+      "inCart": true,
       "img": "/phone_charger.jpeg",
       "altImg": "Phone Charger",
       "price": 15.99,
-      "quantity": 0
+      "quantity": 1
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
