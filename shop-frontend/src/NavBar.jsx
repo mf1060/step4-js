@@ -6,8 +6,11 @@
 
 import SearchResults from './SearchResults';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function NavBar(props){
+
+const [searchTerm, setSearchTerm] = useState('');
 
 //Getting the number of items in the cart.
 let numItems = 0
@@ -15,15 +18,13 @@ let numItems = 0
   numItems = numItems + t.quantity
 })
 
-  //This is similar to the search function we developed in class. 
-  const handleSearch = () => {
-    //Gets the search term from the user's input in the search bar.
-    const inputText = document.getElementById('search').value;
-    //On change, the function would display any item that matches language in the search term.
-    //Stores all items that match the search term to the items variable.
-    props.setSearchTerm(inputText)
-    props.setResults(props.allItems.filter(items => items.title.toLowerCase().includes(inputText)));
-  }
+//Sets the search term from the input
+const setSearch = () => {
+  //Retrieves search term from input
+   const searchTerm = document.getElementById('search').value;
+   //Sets search term
+   setSearchTerm(searchTerm)
+}
 
     return(
       <>
@@ -40,9 +41,10 @@ let numItems = 0
             {/*Adding links to the home, search, and cart pages */}
             <a class="nav-item nav-link active" href="/">Home</a>
           </div>
-          <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          {/* Using a search bar with a bootstrap nav component, reference: https://getbootstrap.com/docs/4.0/components/navbar/*/}
+            <input onChange={setSearch} id="search" name="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" />
             {/*Using a magnifying glass icon: https://icons.getbootstrap.com/icons/search/ */}
-            <button id="search-icon" href={`search/?${props.searchTerm}`} onChange={handleSearch}><i class="bi bi-search"></i></button>
+            <a href={`/search/${searchTerm}`}><button id="search-icon"><i class="bi bi-search"></i></button></a>
             <a class="nav-item nav-link" href="/Cart">
             {/*Using the basket bootstrap icon: https://icons.getbootstrap.com/icons/basket/ */}
             <i class="bi bi-basket"></i>
@@ -56,6 +58,7 @@ let numItems = 0
 
       <div id="nav_bar_2">
         <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link">All</a>
             <a class="nav-item nav-link">Amazon Haul</a>
@@ -71,6 +74,7 @@ let numItems = 0
             <a class="nav-item nav-link">New Releases</a>
             <a class="nav-item nav-link">Registry</a>
             <a class="nav-item nav-link">Smart Home</a>
+        </div>
         </div>
         </nav>
       </div>

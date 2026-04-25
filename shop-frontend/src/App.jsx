@@ -9,12 +9,12 @@ import ItemPage from './ItemPage';
 import SearchResults from './SearchResults';
 import Cart from './ShoppingCart';
 
+
 function App() {
 
   const API_URL = 'http://localhost:5000/items';
   const [allItems, setAllItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  const [results, setResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
@@ -38,16 +38,14 @@ function App() {
   return (
     <>
     <BrowserRouter>
-        <NavBar allItems={allItems} cartItems={cartItems} 
-        setResults={setResults} setSearchTerm={setSearchTerm} 
-        searchTerm={searchTerm} results={results}/>
+        <NavBar allItems={allItems}
+        cartItems={cartItems} 
+        setSearchTerms={setSearchTerm} />
 
       <Routes>
         {/*Creating a route for the home page */}
         <Route path="/" element={<Home allItems={allItems}/>} />
         {/*Creating a route for the search bar */}
-        <Route path="/Search" element={<Search allItems={allItems}/>} />
-        {/*Creating a route for the shopping cart */}
         
         <Route path="/Cart" element={<ShoppingCart cartItems={cartItems} />} />
 
@@ -57,8 +55,8 @@ function App() {
             <Route path={`/${t.id}`} element={<ItemPage item={t} />} />  
         ))}
 
-        <Route path={`search/?${searchTerm}`} element={<SearchResults results={results} />} />
-
+        {/*Create useParams, reference: https://reactrouter.com/api/hooks/useParams*/}
+        <Route path="/search/:searchTerm" element={<SearchResults allItems={allItems} searchTerm={searchTerm} />} />
       </Routes>
 
     </BrowserRouter>
@@ -66,8 +64,8 @@ function App() {
     {/*Using off canvas from Bootstrap:
     https://getbootstrap.com/docs/5.3/components/offcanvas/ */}
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <button type="button" class="btn-close" data-bs-dismiss="#my-offcanvas" aria-label="Close"></button>
+    <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         <ShoppingCart cartItems={cartItems} />
         
     </div>
