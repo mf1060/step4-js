@@ -2,7 +2,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import ShoppingCart from './ShoppingCart';
-import Search from './SearchBar';
 import Home from './Home';
 import NavBar from './NavBar';
 import ItemPage from './ItemPage';
