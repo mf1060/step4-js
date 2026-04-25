@@ -37,10 +37,6 @@ const setSearch = () => {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            {/*Adding links to the home, search, and cart pages */}
-            <a class="nav-item nav-link active" href="/">Home</a>
-          </div>
           {/* Using a search bar with a bootstrap nav component, reference: https://getbootstrap.com/docs/4.0/components/navbar/*/}
             <input onChange={setSearch} id="search" name="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" />
             {/*Using a magnifying glass icon: https://icons.getbootstrap.com/icons/search/ */}
