@@ -64,7 +64,7 @@ function App() {
     {/*Using off canvas from Bootstrap:
     https://getbootstrap.com/docs/5.3/components/offcanvas/ */}
 
-    <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         <ShoppingCart cartItems={cartItems} />
         
