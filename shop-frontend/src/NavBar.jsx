@@ -61,12 +61,9 @@ const setSearch = () => {
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link">All</a>
-            <a class="nav-item nav-link">Amazon Haul</a>
             <a class="nav-item nav-link">Medical Care</a>
-            <a class="nav-item nav-link">Amazon Basics</a>
             <a class="nav-item nav-link">Best Sellers</a>
             <a class="nav-item nav-link">Books</a>
-            <a class="nav-item nav-link">Prime</a>
             <a class="nav-item nav-link">Today's Deals</a>
             <a class="nav-item nav-link">Gift Cards</a>
             <a class="nav-item nav-link">Sell</a>
