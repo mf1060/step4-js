@@ -60,7 +60,7 @@ function QuantityToggle(props){
     //If the item is not in the cart.
     if (quantity <= 0){
         //Only displays the "Add to Cart button"
-        return <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={() => {updateCart(props.id, 1)}} class="btn btn-primary">Add to Cart</button>
+        return <button id="add-to-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onClick={() => {updateCart(props.id, 1)}} class="btn btn-primary">Add to Cart</button>
 
     } else {
         //Adds the incrementer and decrementer buttons with the quantity of the item in the middle. 

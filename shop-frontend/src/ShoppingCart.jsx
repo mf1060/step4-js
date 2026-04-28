@@ -14,6 +14,7 @@ function Cart(props){
       //Reference: https://getbootstrap.com/docs/4.0/content/tables/
       <div id="cart">
         <h1>Cart</h1>
+        <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
         <table class="table">
         <thead>
           <tr>

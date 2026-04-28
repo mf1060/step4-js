@@ -11,6 +11,13 @@ To start the backend, navigate to the `shop-backend` directory in your terminal 
 # Frontend
 To start the frontend of the web application, navigate to the `shop-frontend` directory in your terminal and use the command `npm run dev`
 
+# New Features for Step 4
+- Uses a [Bootstrap offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/) to show the contents of the cart whenever a new item is added to the cart.
+- Adds a cart icon and a search icon
+- Creates a search in the navbar using [React Router and useParams](https://www.w3schools.com/react/react_router.asp)
+- Adds items to the home page as "Featured items"
+- Uses styling for the Navbar that mimics the styling for Amazon
+
 # Features
 The current implemented features are:
 - Use of [React Router](https://www.w3schools.com/react/react_router.asp) and a [Bootstrap NavBar](https://getbootstrap.com/docs/4.0/components/navbar/) to create pages and navigate between them. There is a home page, a search page, a cart page, and an individual page for each product. 
@@ -21,7 +28,7 @@ The current implemented features are:
 - An "add to cart" button that uses "+" and "-"/garbage can icons to add or remove items to the cart.
 - Individual product pages linked to each item in the home, search, and cart pages.
 - The ability to add items to the cart from the home, search, individual product pages, and the cart page.
-- Uses a [Bootstrap offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/) to show the contents of the cart whenever a new item is added to the cart.
+
 
 
 
